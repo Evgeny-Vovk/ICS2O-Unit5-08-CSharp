@@ -10,22 +10,49 @@ class Program
     public static void Main(string[] args)
     {
         // This program calculate which movie rate can you watch
-        int number;
-        var answer = 0;
+        int firstInput;
+        int secondInput;
+        int repeat;
+        int fullNumber = 0;
 
         // input
-        Console.Write("\nThis program multiplies two numbers using a loop system. ");
+        Console.Write("\nThis program divides two numbers and shows the reminder using a loop system. ");
         Console.WriteLine("");
-        Console.Write("\nInput the number: ");
-        number = Convert.ToInt32(Console.ReadLine());
+        Console.Write("\nInput the first number: ");
+        firstInput = Convert.ToInt32(Console.ReadLine());
+        repeat = firstInput;
+        Console.Write("\nInput the number you want to divide it by: ");
+        secondInput = Convert.ToInt32(Console.ReadLine());
 
         // process
-        Console.WriteLine("");
-        for (int repeat = 0; repeat <= number; repeat++)
+       if ((firstInput > 0) && (secondInput > 0))
         {
-            answer += repeat;
+          while (repeat >= secondInput) 
+          {
+            repeat = repeat - secondInput;
+            ++fullNumber;
+          }
         }
-        Console.WriteLine("The answer is " + answer + ".");
+        else if ((firstInput < 0) && (secondInput < 0))
+          {
+          while (Math.Abs(repeat) >= Math.Abs(secondInput))
+          {
+            repeat = Math.Abs(repeat) - Math.Abs(secondInput);
+            ++fullNumber;
+          }
+          repeat = repeat * -1;
+        }
+        else if ((firstInput < 0) || (secondInput < 0))
+        {
+          while (Math.Abs(repeat) >= Math.Abs(secondInput))
+          {
+            repeat = Math.Abs(repeat) - Math.Abs(secondInput);
+            ++fullNumber;
+          }
+          fullNumber = fullNumber * -1;
+          repeat = repeat * -1;
+        }
+        Console.WriteLine("\n\nThe full number is " + fullNumber + " and the reminder is " + repeat + ".");
         Console.WriteLine("\nDone.");
     }
 }
