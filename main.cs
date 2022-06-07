@@ -25,32 +25,32 @@ class Program
         secondInput = Convert.ToInt32(Console.ReadLine());
 
         // process
-       if ((firstInput > 0) && (secondInput > 0))
+        if ((firstInput > 0) && (secondInput > 0))
         {
-          while (repeat >= secondInput) 
-          {
-            repeat = repeat - secondInput;
-            ++fullNumber;
-          }
+            while (repeat >= secondInput) 
+            {
+                repeat = repeat - secondInput;
+                ++fullNumber;
+            }
         }
         else if ((firstInput < 0) && (secondInput < 0))
-          {
-          while (Math.Abs(repeat) >= Math.Abs(secondInput))
-          {
-            repeat = Math.Abs(repeat) - Math.Abs(secondInput);
-            ++fullNumber;
-          }
-          repeat = repeat * -1;
+        {
+            while (Math.Abs(repeat) >= Math.Abs(secondInput))
+            {
+                repeat = Math.Abs(repeat) - Math.Abs(secondInput);
+                ++fullNumber;
+            }
+            repeat = repeat * -1;
         }
         else if ((firstInput < 0) || (secondInput < 0))
         {
-          while (Math.Abs(repeat) >= Math.Abs(secondInput))
-          {
-            repeat = Math.Abs(repeat) - Math.Abs(secondInput);
-            ++fullNumber;
-          }
-          fullNumber = fullNumber * -1;
-          repeat = repeat * -1;
+            while (Math.Abs(repeat) >= Math.Abs(secondInput))
+            {
+                repeat = Math.Abs(repeat) - Math.Abs(secondInput);
+                ++fullNumber;
+            }
+            fullNumber = fullNumber * -1;
+            repeat = repeat * -1;
         }
         Console.WriteLine("\n\nThe full number is " + fullNumber + " and the reminder is " + repeat + ".");
         Console.WriteLine("\nDone.");
