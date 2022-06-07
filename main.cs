@@ -27,7 +27,7 @@ class Program
         // process
         if ((firstInput > 0) && (secondInput > 0))
         {
-            while (repeat >= secondInput) 
+            while (repeat >= secondInput)
             {
                 repeat = repeat - secondInput;
                 ++fullNumber;
