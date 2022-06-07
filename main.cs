@@ -52,7 +52,14 @@ class Program
             fullNumber = fullNumber * -1;
             repeat = repeat * -1;
         }
+    if (repeat == 0)
+    {
+        Console.WriteLine("\n\nThe full number is " + fullNumber + " and the reminder is no reminder.");
+    }
+    else
+    {
         Console.WriteLine("\n\nThe full number is " + fullNumber + " and the reminder is " + repeat + ".");
-        Console.WriteLine("\nDone.");
+    }
+    Console.WriteLine("\nDone.");
     }
 }
