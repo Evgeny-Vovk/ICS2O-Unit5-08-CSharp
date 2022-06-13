@@ -40,7 +40,6 @@ class Program
                 repeat = Math.Abs(repeat) - Math.Abs(secondInput);
                 ++fullNumber;
             }
-            repeat = repeat * -1;
         }
         else if ((firstInput < 0) || (secondInput < 0))
         {
@@ -50,7 +49,6 @@ class Program
                 ++fullNumber;
             }
             fullNumber = fullNumber * -1;
-            repeat = repeat * -1;
         }
     if (repeat == 0)
     {
